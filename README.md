@@ -8,13 +8,13 @@ $ docker pull pytorch/pytorch
 ```
 ref: https://hub.docker.com/r/pytorch/pytorch
 
-b. Clone this repository in $HOME/program directory.
+b. Clone this repository in $HOME/program/DL_Pytorch directory.
 ```
-$ cd ~/program
+$ cd ~/program/DL_Pytorch
 $ git clone https://github.com/BrianCmHunag/Exercise_Pytorch.git
 ```
 c. Type the cmd to enter docker container.
 ```
-$ cd ~/program/Exercise_Pytorch
+$ cd ~/program/DL_Pytorch/Exercise_Pytorch
 $ source cmd.sh [run | start | exec]
 ```

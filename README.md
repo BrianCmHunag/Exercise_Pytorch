@@ -10,7 +10,9 @@ ref: https://hub.docker.com/r/pytorch/pytorch
 
 b. Clone this repository in $HOME/program/DL_Pytorch directory.
 ```
+$ mkdir -p ~/program/DL_Pytorch
 $ cd ~/program/DL_Pytorch
+$ mkdir data
 $ git clone https://github.com/BrianCmHunag/Exercise_Pytorch.git
 ```
 c. Type the cmd to enter docker container.

@@ -4,9 +4,11 @@ Implement some deep learning exercises with pytorch.
 ## How to Setup Environment
 a. Use docker to setup Pytorch environment directly.
 ```
-$ docker pull pytorch/pytorch
+$ docker pull iles88039/pytorch:v2
 ```
-ref: https://hub.docker.com/r/pytorch/pytorch
+Please refer to the Dockerfile if you are interested.
+https://hub.docker.com/repository/docker/iles88039/pytorch
+https://hub.docker.com/r/pytorch/pytorch
 
 b. Clone this repository in $HOME/program/DL_Pytorch directory.
 ```

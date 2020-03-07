@@ -10,7 +10,7 @@ Please refer to the Dockerfile if you are interested.\
 You can also visit my dockerhub for more details:
 https://hub.docker.com/repository/docker/iles88039/pytorch \
 Pytorch dockerhub:
-https://hub.docker.com/r/pytorch/pytorch \
+https://hub.docker.com/r/pytorch/pytorch 
 ### b. Clone this repository in $HOME/program/DL_Pytorch directory.
 ```
 $ mkdir -p ~/program/DL_Pytorch

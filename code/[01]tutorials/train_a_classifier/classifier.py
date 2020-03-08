@@ -20,7 +20,7 @@ trainloader = torch.utils.data.DataLoader(trainset, batch_size=4, shuffle=True, 
 #num_workers: Set it as a positive integer will turn on multi-process data loading with the specified number of loader worker processes.
 
 #Download testing data and load them.
-testset = torchvision.datasets.CIFAR10(root='~/workspace/data', train=False, download=True, transform=transform)
+testset = torchvision.datasets.CIFAR10(root='/workspace/data', train=False, download=True, transform=transform)
 testloader = torch.utils.data.DataLoader(testset, batch_size=4, shuffle=False, num_workers=2)
 
 classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')

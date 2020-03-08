@@ -23,6 +23,6 @@ $ git clone https://github.com/BrianCmHunag/Exercise_Pytorch.git
 $ cd ~/program/DL_Pytorch/Exercise_Pytorch
 $ source cmd.sh [run | start | exec]
 ```
-run: Setup a new container named "dl_container".\
+run: Setup a new container named "dl_container". Read cmd.sh for more details.\
 start: If the container was stopped, it will turn on.\
 exec: Enter the cmd shell.\

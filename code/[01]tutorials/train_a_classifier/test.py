@@ -6,7 +6,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 import matplotlib.pyplot as plt
-%matplotlib inline
+
 import numpy as np
 
 # 1. Loading and normalizing CIFAR10
@@ -17,7 +17,7 @@ transform = transforms.Compose( # Do multiple transforms in the same time.
 
 #Download testing data and load them.
 testset = torchvision.datasets.CIFAR10(root='/workspace/data', train=False, download=True, transform=transform)
-testloader = torch.utils.data.DataLoader(testset, batch_size=4, shuffle=False, num_workers=2)
+testloader = torch.utils.data.DataLoader(testset, batch_size=4, shuffle=True, num_workers=2)
 
 classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
@@ -66,8 +66,21 @@ print('Predicted: ', ' '.join('%5s' % classes[predicted[j]] for j in range(4)))
 def imshow(img):
     img = img / 2 + 0.5     # unnormalize
     npimg = img.numpy()
-    plt.imshow(np.transpose(npimg, (1, 2, 0)))
+    plt.imshow(np.transpose(npimg, (1, 2, 0))) # first channel change to zero channel (rgb->gbr)
     plt.show()
 
 # show images
 imshow(torchvision.utils.make_grid(images))
+
+while True:
+    print("Press 'n' to test next batch. Other input would close the progrm.")
+    char = input()
+    if char == 'n':
+        images, labels = dataiter.next()
+        print('GroundTruth: ', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
+        outputs = net(images)
+        _, predicted = torch.max(outputs, 1)
+        print('Predicted: ', ' '.join('%5s' % classes[predicted[j]] for j in range(4)))
+        imshow(torchvision.utils.make_grid(images))
+    else:
+        break 

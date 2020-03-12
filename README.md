@@ -25,4 +25,4 @@ $ source cmd.sh [run | start | exec]
 ```
 run: Setup a new container named "dl_container". Read cmd.sh for more details.\
 start: If the container was stopped, it will turn on.\
-exec: Enter the cmd shell.\
+exec: Enter the cmd shell.

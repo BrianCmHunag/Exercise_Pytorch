@@ -11,10 +11,10 @@ if [ $# == 1 ]; then
     # share the Host’s XServer with the Container
     docker run --privileged --net=host --env="DISPLAY" -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -it -v $HOME/program/DL_Pytorch:/workspace --name dl_container iles88039/pytorch:v2.2
   elif [ $1 == "start" ] ; then
-    echo "docker start -it dl_container bash"
+    echo "docker start dl_container"
     docker start dl_container
   elif [ $1 == "exec" ] ; then
-    echo "docker start -it dl_container bash"
+    echo "docker exec -it dl_container bash"
     docker exec -it dl_container bash
   else
     echo -e "${COLOR_RED}Usage: source cmd.sh [run | start | exec]${COLOR_NC}"
